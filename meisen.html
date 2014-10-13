@@ -3,48 +3,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery-1.10.2.js" type="text/javascript"></script>
+<script src="meisen.js" type="text/javascript"></script>
 <link href="meisen.css" type="text/css"  rel="stylesheet" />
-<script type="text/javascript">
-function scrollTo(anchor){
-	debugger;
-	$("html,body").animate({scrollTop:$($(anchor).attr("scrollto")).offset().top},"slow");
-}
-</script>
 <title>美森园林</title>
 </head>
 <body>
+<div id="debug" style="position:fixed;color:white;z-index:2"></div>
 <div id="header"><img id = "logo" a src="site/logo.png"/>&nbsp;<img id="slogan"  src="site/slogan.png"/></div>
 <div id="nav">
   <ul>
-    <li>
-      <a scrollto="#introduction"  href="javascript:void(0)" onclick="scrollTo(this)">
-      关于美森
-      </a>
-    </li>
-    <li>
-      <a scrollto="#news"  href="javascript:void(0)" onclick="scrollTo(this)">
-      新闻动态
-      </a>
-    </li>
-    <li>
-      <a scrollto="#gallery"  href="javascript:void(0)" onclick="scrollTo(this)">
-      工程展示
-      </a>
-    </li>
-    <li>
-      <a scrollto="#contactUs"  href="javascript:void(0)" onclick="scrollTo(this)">
-      联系方式
-      </a>
-    </li>
-    <li>
-      <a scrollto="#comment"  href="javascript:void(0)" onclick="scrollTo(this)">
-      留言给我们
-      </a>
-    </li>
+    <li> <a scrollto="#introduction"  href="javascript:void(0)" onclick="scrollTo(this)" class="normal hover"> 关于美森 </a> </li>
+    <li> <a scrollto="#news"  href="javascript:void(0)" onclick="scrollTo(this)" class="normal hover"> 新闻动态 </a> </li>
+    <li> <a scrollto="#gallery"  href="javascript:void(0)" onclick="scrollTo(this)" class="normal hover"> 工程展示 </a> </li>
+    <li> <a scrollto="#contactUs"  href="javascript:void(0)" onclick="scrollTo(this)" class="normal hover"> 联系方式 </a> </li>
+    <li> <a scrollto="#comment"  href="javascript:void(0)" onclick="scrollTo(this)" class="normal hover"> 留言给我们 </a> </li>
   </ul>
 </div>
-<div id="exhibition"><img src="site/exhibition.jpg"/></div>
-<div id="introduction">
+<div id="exhibition"><img src="site/exhibition.jpg"/>
+  <div id="progressBar" style="display:none">
+    <div id="progress"></div>
+  </div>
+</div>
+<div id="introduction" class="topic">
   <h1 class="topicTitle">
     <p>您好.</p>
     <p>我是美森园林</p>
@@ -56,7 +36,7 @@ function scrollTo(anchor){
   </div>
   <div class="moreInfo">了解更多关于 美森园林</div>
 </div>
-<div id="news">
+<div id="news" class="topic">
   <div class="inner">
     <h1 class="topicTitle">新闻动态</h1>
     <h3 class="slogan">最佳园林工程创作,不二之选</h3>
@@ -68,28 +48,15 @@ function scrollTo(anchor){
         <li>工作室</li>
       </ul>
     </div>
-    <div id = "pagination">
-      <a href="javascript:void(0)" class="previous">
-      <img src="site/left.png"/>上一页
-      </a>
-      <a class="next" href="javascript:void(0)" >
-      下一页<img src="site/right.png"/>
-      </a>
-    </div>
+    <div id = "pagination"> <a href="javascript:void(0)" class="previous"> <img src="site/left.png"/>上一页 </a> <a class="next" href="javascript:void(0)" > 下一页<img src="site/right.png"/> </a> </div>
     <div class="moreInfo">了解更多关于 美森园林</div>
   </div>
 </div>
-<div id="gallery">
+<div id="gallery" class="topic">
   <div class="inner">
     <h1 class="topicTitle">工程展示</h1>
     <h3 class="slogan">最佳园林工程创作,不二之选</h3>
-    <div id="works">
-      <a class="previous" href="javascript:void(0)">
-      <img src="site/left.png"/>上一页
-      </a>
-      <a class="next" href="javascript:void(0)">
-      下一页<img src="site/right.png"/>
-      </a>
+    <div id="works"> <a class="previous" href="javascript:void(0)"> <img src="site/left.png"/>上一页 </a> <a class="next" href="javascript:void(0)"> 下一页<img src="site/right.png"/> </a>
       <table>
         <tbody>
           <tr>
@@ -128,7 +95,7 @@ function scrollTo(anchor){
     <div class="moreInfo">了解更多关于 美森园林</div>
   </div>
 </div>
-<div id="contactUs">
+<div id="contactUs" class="topic">
   <div class="inner">
     <h1 class="topicTitle">请联系我们</h1>
     <h3 class="slogan">最佳园林工程创作,不二之选</h3>
@@ -163,7 +130,7 @@ function scrollTo(anchor){
     <div class="moreInfo">了解更多关于 美森园林</div>
   </div>
 </div>
-<div id="comment">
+<div id="comment" class="topic">
   <div class="inner">
     <h1 class="topicTitle">欢迎留言</h1>
     <h4 >
@@ -184,7 +151,8 @@ function scrollTo(anchor){
             <td colspan="2"><input  type="text" placeholder="关于什么？"/></td>
           </tr>
           <tr>
-            <td colspan="2"><textarea placeholder="内容"></textarea></td>
+            <td colspan="2"><textarea placeholder="内容">
+</textarea></td>
           </tr>
         </tbody>
       </table>
@@ -197,32 +165,9 @@ function scrollTo(anchor){
 <div id="footer">
   <p>美森园林环境艺术工程有限公司</p>
   <p>地址:广州市白云区金沙洲保利西海岸汇海花园</p>
-  <p>
-    <a>
-    联系人:王哲浩
-    </a>
-    <a>
-    手机:139-2648-6221&nbsp;186-6464-7076
-    </a>
-    <a>
-    邮箱:wanghaozhe1988@126.com
-    </a>
-    <a>
-    网址:www.meisens.com
-    </a>
-  </p>
+  <p> <a> 联系人:王哲浩 </a> <a> 手机:139-2648-6221&nbsp;186-6464-7076 </a> <a> 邮箱:wanghaozhe1988@126.com </a> <a> 网址:www.meisens.com </a> </p>
   <p>技术支持:金泉网</p>
-  <p id="adminGate">
-    <a>
-    管理入口
-    </a>
-    <a>
-    金泉助手
-    </a>
-    <a>
-    免责声明
-    </a>
-  </p>
+  <p id="adminGate"> <a href="javascript:void(0)"> 管理入口</a> <a href="javascript:void(0)"> 金泉助手</a> <a href="javascript:void(0)"> 免责声明</a> </p>
 </div>
 </body>
 </html>

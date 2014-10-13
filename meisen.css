@@ -5,6 +5,9 @@
 	margin: 0;
 	padding: 0;
 }
+img {
+	border: none;
+}
 body {
 	min-width: 960px;
 }
@@ -22,6 +25,7 @@ body {
 	height: 66px;
 	background: #464646;
 	overflow: hidden;
+	width: 100%;/*box-shadow:1px 1px 1px 1px #fff;*/
 }
 #nav ul {
 	margin : 18px auto;
@@ -42,17 +46,32 @@ body {
 	padding: 0 18px;
 	text-decoration: none;
 	font-size: 14px;
+	color: white;
+}
+#nav ul a.hover {
+	background: #6b6b6b;
+}
+#nav ul a.normal {
+	background: none;
 }
 #nav ul a:link, #nav ul a:visited, #nav ul a:hover, #nav ul a:active {
-	color: white;
+/*color: white;*/
 }
 #nav ul a:hover {
 	background: #6b6b6b;
 }
 #exhibition {
-	height: 411px;
+	max-height: 500px;
 	overflow: hidden;
 	text-align: center;
+}
+#exhibition img {
+	width: 100%;
+}
+#progress {
+	height: 5px;
+	background: red;
+	width: 1%;
 }
 #introduction {
 	width: 640px;
@@ -231,22 +250,28 @@ h3.slogan {
 	border: none;
 	color: #FFF;
 	font-size: 18px;
-	padding-left: 10px;
 	border-radius: 4px;
 	/*just input height*/
 	height: 40px;
+	overflow: hidden;
+}
+#commentForm input {
+	text-indent: 10px;
 }
 #commentForm textarea {
 	height: 200px;
 	overflow-y: scroll;
 	resize: none;
+	line-height: 24px;
+	width: 764px;
+	padding: 10px;
 }
 #commentForm button {
 	border: none;
 	color: #FFF;
 	height: 50px;
 	width: 100px;
-	margin-bottom: 50px;
+	margin: 0 0 50px 10px;
 	font-size: 16px;
 }
 #commentForm button:hover {
@@ -276,6 +301,8 @@ h3.slogan {
 }
 #adminGate a {
 	padding: 0 10px;
+	color: #8D8D8D;
+	text-decoration: none;
 }
 #adminGate a+a {
 	border-left: #8D8D8D 1px solid;
