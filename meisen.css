@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: none;
+}
+body {
+	min-width: 960px;
+}
+#header {
+	height: 138px;
+	line-height: 138px;
+}
+#header img {
+	vertical-align: middle;
+}
+#slogan {
+}
+/*导航栏*/
+#nav {
+	height: 66px;
+	background: #464646;
+	overflow: hidden;
+	width: 100%;/*box-shadow:1px 1px 1px 1px #fff;*/
+}
+#nav ul {
+	margin : 18px auto;
+	height: 30px;
+	width: 960px;
+	overflow: hidden;
+}
+#nav ul > li {
+	list-style-type: none;
+	float: left;
+	margin: 0 0 0 18px;
+}
+#nav ul a {
+	display: block;
+	height: 30px;
+	vertical-align: middle;
+	line-height: 30px;
+	padding: 0 18px;
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+}
+#nav ul a.hover {
+	background: #6b6b6b;
+}
+#nav ul a.normal {
+	background: none;
+}
+#nav ul a:link, #nav ul a:visited, #nav ul a:hover, #nav ul a:active {
+/*color: white;*/
+}
+#nav ul a:hover {
+	background: #6b6b6b;
+}
+#exhibition {
+	max-height: 500px;
+	overflow: hidden;
+	text-align: center;
+}
+#exhibition img {
+	width: 100%;
+}
+#progress {
+	height: 5px;
+	background: red;
+	width: 1%;
+}
+#introduction {
+	width: 640px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+h1.topicTitle {
+	font-weight: 100;
+	font-size: 36px;
+	text-indent: 0;
+	color: #515151;
+	font: "宋体", Arial, sans-serif;
+}
+h3.slogan {
+	font-weight: 100;
+	font-size: 20px;
+	margin: 37px 0 56px;
+	color: #969696;
+}
+#introduction div.content {
+	text-indent: 30px;
+	margin: 33px 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: #454545;
+}
+.moreInfo {
+	width: 280px;
+	height: 70px;
+	background: #006835;
+	font-size: 20px;
+	line-height: 70px;
+	text-align: center;
+	color: white;
+}
+.moreInfo:hover {
+	cursor: pointer;
+	background: #117946;
+}
+#news {
+	background: #e3e3e3;
+}
+#news .inner {
+	width: 770px;
+	margin: 0 auto;
+	padding: 80px 0 160px;
+}
+#ulWrapper {
+	width: 770px;
+	border: solid #2A3F55 1px;
+	margin-top: 90px;
+}
+#ulWrapper ul {
+	padding: 20px;
+}
+#ulWrapper li {
+	list-style: none;
+	height: 32px;
+	line-height: 32px;
+}
+#ulWrapper li+li {
+	border-top: dashed 1px #808080;
+}
+#pagination {
+	margin: 18px 0;
+	float: right;
+	line-height: 24px;
+}
+#pagination a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: black;
+}
+#pagination img {
+	vertical-align: middle;
+}
+#news .moreInfo {
+	clear: both;
+}
+#gallery {
+	text-align: center;
+	border-bottom: #A0A0A4 solid 1px;
+}
+#gallery .inner {
+	width: 886px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#works {
+	padding: 10px;
+	font-size: 12px;/*background: yellow;*/
+}
+#works table, #works td {
+	border-collapse: collapse;
+}
+#works table {
+	/*background: red;*/
+	margin: 0 auto;
+}
+#works td {
+	border: solid transparent 10px;
+}
+#works td img {
+	width: 156px;
+	height: 105px;
+}
+#works a {
+	text-decoration: none;
+	color: inherit;
+}
+#works a img {
+	vertical-align: middle;
+}
+#works a.previous {
+	float: left;
+}
+#works a.next {
+	float: right;
+}
+#gallery .moreInfo {
+	margin: 90px auto 0;
+}
+#contactUs .inner {
+	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#contactUs .moreInfo {
+	margin: 90px auto 0;
+}
+#contactUs table {
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 30px;
+}
+#contactUs table th {
+	text-align: right;
+	font-weight: 100;
+}
+#contactUs table td {
+	text-align: left;
+	padding-left: 30px;
+}
+#comment {
+	background: #2f2f2f;
+	overflow: hidden;
+	padding: 50px 0;
+	text-align: center;
+	color: #8D8D8D;
+}
+#comment .inner {
+	width: 800px;
+	margin: 0 auto;
+}
+#comment h1 {
+	color: white;
+}
+#comment h4 {
+	font-weight: 100;
+	font-size: 18px;
+	margin: 37px 0 56px;
+	color: #8D8D8D;
+}
+#commentForm table {
+	width: 100%;
+}
+#commentForm table, #commentForm td {
+	border-collapse: collapse;
+	border: solid 16px transparent;
+}
+#commentForm input, #commentForm textarea {
+	width: 100%;
+	line-height: 40px;
+	background: #282828;
+	border: none;
+	color: #FFF;
+	font-size: 18px;
+	border-radius: 4px;
+	/*just input height*/
+	height: 40px;
+	overflow: hidden;
+}
+#commentForm input {
+	text-indent: 10px;
+}
+#commentForm textarea {
+	height: 200px;
+	overflow-y: scroll;
+	resize: none;
+	line-height: 24px;
+	width: 764px;
+	padding: 10px;
+}
+#commentForm button {
+	border: none;
+	color: #FFF;
+	height: 50px;
+	width: 100px;
+	margin: 0 0 50px 10px;
+	font-size: 16px;
+}
+#commentForm button:hover {
+	cursor: pointer;
+}
+#send {
+	background: #006835;
+}
+#send:hover {
+	background: #117946;
+}
+#cancel {
+	background: #5A5A5A;
+}
+#cancel:hover {
+	background: #6b6b6b;
+}
+#footer {
+	background: #2f2f2f;
+	overflow: hidden;
+	padding: 30px 0;
+	text-align: center;
+	border-top: solid 1px #838383;
+	color: #8D8D8D;
+	font-size: 14px;
+	line-height: 24px;
+}
+#adminGate a {
+	padding: 0 10px;
+	color: #8D8D8D;
+	text-decoration: none;
+}
+#adminGate a+a {
+	border-left: #8D8D8D 1px solid;
+}
